@@ -3,6 +3,7 @@ class CreateAffairs < ActiveRecord::Migration
     create_table :affairs do |t|
       t.string :title
       t.datetime :datetime
+      t.string :address
       t.text :text
 
 

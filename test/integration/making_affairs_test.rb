@@ -16,5 +16,13 @@ class MakingAffairsTest < ActionDispatch::IntegrationTest
 
     page.click_button('Create Affair')
     assert page.has_content?("Josh's Birthday Party")
+
+    fill_in('Guest', :with =>'Brandt Faulkner')
+    fill_in('Body', :with => 'I will maybe go')
+    fill_in('Email' :with => 'blech@blech.com')
+
+    page.click_button('Create Rsvp')
+    assert page.has_content?("Brandt")
+            
   end
 end

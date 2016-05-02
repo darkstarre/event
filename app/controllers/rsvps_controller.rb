@@ -1,6 +1,7 @@
 class RsvpsController < ApplicationController
 
-  http_basic_authenticate_with name: "dhh", password: "secret", only: destroy
+  #http_basic_authenticate_with name: "dhh", password: "secret", only: destroy
+  
   def create
     @affair = Affair.find(params[:affair_id])
     @rsvp = @affair.rsvps.create(rsvp_params)
