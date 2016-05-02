@@ -12,3 +12,9 @@
   <strong>Comment:</strong>
   <%= rsvp.body %>
 </p>
+
+<p>
+  <%= link_to 'Just kidding, not going', [rsvp.affair, rsvp],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>

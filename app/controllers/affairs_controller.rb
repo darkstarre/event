@@ -1,5 +1,7 @@
 class AffairsController < ApplicationController
 
+ http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+
   def index
     @affairs = Affair.all
   end
@@ -45,6 +47,6 @@ class AffairsController < ApplicationController
 
   private
     def affair_params
-      params.require(:affair).permit(:title,:datetime,:text)
+      params.require(:affair).permit(:title,:datetime,:text,:text)
     end
 end
