@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guest: MyString
+  body: MyText
+  affair_id: 
+
+two:
+  guest: MyString
+  body: MyText
+  affair_id: 

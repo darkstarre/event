@@ -1,0 +1,30 @@
+<p>
+  <strong>Event:</strong>
+  <%= @affair.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @affair.datetime %>
+</p>
+
+<p>
+  <strong>Location:<strong>
+  <%= @affair.text %>
+<p>
+  <strong>Details:</strong>
+  <%= @affair.text %>
+</p>
+
+<br><hr>
+<br><hr>
+<h2>Who's Going?</h2>
+<%= render @affair.rsvps %>
+
+<h2>RSVP Now!</h2>
+<%= render 'rsvps/form' %>
+
+
+<%= link_to 'Edit', edit_affair_path(@affair) %>
+<%= link_to 'Back', affairs_path %>
+

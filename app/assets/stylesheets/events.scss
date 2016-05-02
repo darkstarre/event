@@ -1,0 +1,17 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-text {
+  display: inline;
+  position: relative;
+  font: 25px Helvetica, Sans-Serif;
+  letter-spacing: -3px;
+  color: rgba(0,0,255,0.5);
+}
+
+.new-text:after {
+  content: "New Event";
+  position: fixed; left: 1px; top: 1px;
+  color: rgba(255,0,0,0.5);
+}

@@ -1,0 +1,28 @@
+<h1>All Events!</h1>
+
+<%= link_to 'Add a New Event', new_affair_path %>
+<br><br><br>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date and Time</th>
+    <th>Address</th>
+    <th>Details</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @affairs.each do |affair| %>
+    <tr>
+      <td><%= affair.title %></td>
+      <td><%= affair.datetime %></td>
+      <td><%= affair.text %><td>
+      <td><%= affair.text %></td>
+      <td><%= link_to 'View Details', affair_path(affair) %></td>
+      <td><%= link_to 'Edit', edit_affair_path(affair) %></td>
+      <td><%= link_to 'Cancel Event', affair_path(affair), 
+              method: :delete,
+              data: { confirm: 'Are you sure? People will be sad' } %></td>
+    </tr>
+  <% end %>
+</table>
+

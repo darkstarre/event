@@ -1,0 +1,23 @@
+.background {
+  background: url(http://i1015.photobucket.com/albums/af273/Chapa37/gif/funny-party-so-you-think-you-can-dance.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.text {
+  display: inline;
+  position: relative;
+  font: 200px Helvetica, Sans-Serif;
+  letter-spacing: -5px;
+  color: rgba(0,0,255,0.5);
+}
+
+.text:after {
+  content: "Let's have a DANCE PARTY!";
+  position: absolute; left: 10px; top: 5px;
+  color: rgba(255,0,0,0.5);
+}
+
+
